@@ -1,8 +1,10 @@
-void main(List<String> arguments) {
-  print('Hello world!');
-  print("trying something new jin my life");
-  print("koronio new kaj kam ");
+// main function where the function start running
+void main() {
+  var name = myName();
+  print('may name is $name');
+}
 
-  //print line shiktasi r ki!
-  print("mago ojhor borshay mishe jabo tomar ");
+// creating a  function which return my name
+String myName() {
+  return 'Rahat';
 }
