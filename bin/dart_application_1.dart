@@ -1,10 +1,19 @@
-// main function where the function start running
 void main() {
-  var name = myName();
-  print('may name is $name');
+  var person = new Person();
+  person.firstName = 'Rahat';
+  person.lastName = 'Akash';
+  person.age = 24;
+  person.printInfo();
 }
 
-// creating a  function which return my name
-String myName() {
-  return 'Rahat';
+class Person {
+  late String firstName;
+  late String lastName;
+  late int age;
+
+  printInfo() {
+    print('may name is $firstName');
+    print(lastName);
+    print(age);
+  }
 }
