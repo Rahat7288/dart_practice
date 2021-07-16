@@ -1,19 +1,37 @@
+//creating a caed game
 void main() {
-  var person = new Person();
-  person.firstName = 'Rahat';
-  person.lastName = 'Akash';
-  person.age = 24;
-  person.printInfo();
+  var deck = new Deck();
+  print(deck);
 }
 
-class Person {
-  late String firstName;
-  late String lastName;
-  late int age;
+//in the deck class we will hold the cards/
 
-  printInfo() {
-    print('may name is $firstName');
-    print(lastName);
-    print(age);
+class Deck {
+  late List<Card> cards = [];
+
+  //constractor function
+
+  Deck() {
+    var ranks = ['Ace', 'Two', 'Three', 'Four', 'Five'];
+    var suits = ['Dimonds', 'Hearts', 'Clubs', 'Spades'];
+
+//for individual suit in the suits list.
+    for (var suit in suits) {
+      //for individual rank in the rank list.
+      for (var rank in ranks) {
+        var card = new Card(rank, suit);
+        cards.add(card);
+      }
+    }
   }
+  toString() {
+    return "this is a deck!";
+  }
+}
+
+// in the card class we will have deffrent type of cards
+class Card {
+  late String suit;
+  late String rank;
+  Card(this.rank, this.suit);
 }
